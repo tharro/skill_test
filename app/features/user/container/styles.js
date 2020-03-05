@@ -82,14 +82,15 @@ const styles = StyleSheet.create({
     detail_view_content: {
         flexDirection:'row', 
         flexWrap:'wrap',
-        paddingHorizontal:10
+        paddingHorizontal:10,
+        alignItems:'center'
     },
     detail_info: {
         flex:1,
         marginLeft:10, 
         alignItems:'center',
         flexDirection:'row',
-        flexWrap:'wrap'
+        flexWrap:'wrap',
     },
     detail_button_container: {
         flexDirection:'row', 
