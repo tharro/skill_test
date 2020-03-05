@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import styles from "../container/styles";
 import Color from "../../../config/styles";
-import HeaderView from "./HeaderView";
+import HeaderView from "../components/header/HeaderView";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import moment from "moment";
 

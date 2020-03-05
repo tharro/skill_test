@@ -6,8 +6,8 @@ import {
 } from "react-native";
 import styles from "./styles";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import Color from "../../../config/styles";
-import {navigateGoBack} from "../../../navigation/NavigationHelpers";
+import Color from "../../../../config/styles";
+import {navigateGoBack} from "../../../../navigation/NavigationHelpers";
 
 export default class HeaderView extends Component{
     render(){
