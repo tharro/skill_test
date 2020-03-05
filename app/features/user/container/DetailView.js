@@ -52,21 +52,18 @@ export default class DetailView extends Component {
         }
     }
 
-    _call(value){
+   
+    action_button(value, title, messages){
         if(value==""){
-            Alert.alert("Messages","No phone number!");
+            Alert.alert("Messages",messages);
         }
         else{
-            Linking.openURL(`tel:${value}`);
-        }
-    }
-
-    _mail(value){
-        if(value==""){
-            Alert.alert("Messages","No email!");
-        }
-        else{
-            Linking.openURL(`mailto:${value}`)
+            if(title=='call'){
+                Linking.openURL(`tel:${value}`);
+            }
+            else{
+                Linking.openURL(`mailto:${value}`)
+            }
         }
     }
 
@@ -117,14 +114,14 @@ export default class DetailView extends Component {
 
                     <View style={styles.detail_button_container}>
                         <ButtonComponent 
-                            touch={() => this._mail(this.state.detail_data.email)}
+                            touch={() => this.action_button(this.state.detail_data.email, "mail", "No email")}
                             title = "SEND A MAIL"
                         />
                         
                         <View style={{width:30}}/>
 
                         <ButtonComponent 
-                            touch={() => this._call(this.state.detail_data.phone)}
+                            touch={() => this.action_button(this.state.detail_data.phone, "call", "No phone")}
                             title = "MAKE A CALL"
                         />
                     </View>
