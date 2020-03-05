@@ -67,15 +67,6 @@ const styles = StyleSheet.create({
         flexDirection:'row', 
         marginTop:20
     },
-    detail_button: {
-        flex:1,
-        paddingHorizontal:15,
-        paddingVertical:20,
-        borderRadius:10, 
-        backgroundColor: AppStyles.color.COLOR_BUTTON,
-        justifyContent:'center',
-        alignItems:'center'
-    }
 });
 
 export default styles;

@@ -8,9 +8,9 @@ import {
     TouchableOpacity
 } from "react-native";
 import styles from "../container/styles";
-import Color from "../../../config/styles";
-import HeaderView from "../components/header/HeaderView";
-import MaterialIcons from "react-native-vector-icons/MaterialIcons";
+import HeaderComponent from "../components/header/HeaderComponent";
+import ButtonComponent from "../components/button/ButtonComponent";
+import ContentComponent from "../components/content/ContentComponent";
 import moment from "moment";
 
 export default class DetailView extends Component {
@@ -77,7 +77,7 @@ export default class DetailView extends Component {
     render(){
         return(
             <View style={styles.container}>
-                 <HeaderView 
+                 <HeaderComponent 
                     title = "Detail View"
                     children = {true}
                 />
@@ -100,46 +100,33 @@ export default class DetailView extends Component {
                     <View style={[styles.detail_content,{
                         marginTop:20
                     }]}>
-                        <View style={styles.detail_view_content}>
-                            <MaterialIcons 
-                                name="email"
-                                color={Color.color.COLOR_NAVIGATE}
-                                size={25}
-                            />
-                            <View style={styles.detail_info}>
-                                <Text style={styles.detail_orther}>Email: </Text>
-                                <Text style={styles.detail_orther}>{this.state.detail_data.email}</Text>
-                            </View>
-                        </View>
+                        <ContentComponent 
+                            icon_name = "email"
+                            title = "Email"
+                            value = {this.state.detail_data.email}
+                            marginTop={0}
+                        />
 
-                        <View style={[styles.detail_view_content,{
-                            marginTop:5
-                        }]}>
-                            <MaterialIcons 
-                                name="phone"
-                                color={Color.color.COLOR_NAVIGATE}
-                                size={25}
-                            />
-                            <View
-                            style={styles.detail_info}>
-                                    <Text style={styles.detail_orther}>Phone: </Text>
-                                    <Text style={styles.detail_orther}>{this.state.detail_data.phone}</Text>
-                            </View>
-                        </View>
+                        <ContentComponent 
+                            icon_name = "phone"
+                            title = "Phone"
+                            value = {this.state.detail_data.phone}
+                            marginTop={5}
+                        />
                     </View>
 
                     <View style={styles.detail_button_container}>
-                        <TouchableOpacity 
-                            onPress={()=>this._mail(this.state.detail_data.email)}
-                            style={styles.detail_button}>
-                            <Text style={{color:'white', fontSize: 17}}>SEND A MAIL</Text>
-                        </TouchableOpacity>
+                        <ButtonComponent 
+                            touch={() => this._mail(this.state.detail_data.email)}
+                            title = "SEND A MAIL"
+                        />
+                        
                         <View style={{width:30}}/>
-                        <TouchableOpacity 
-                            onPress={()=>this._call(this.state.detail_data.phone)}
-                            style={styles.detail_button}>
-                            <Text style={{color:'white', fontSize: 17}}>MAKE A CALL</Text>
-                        </TouchableOpacity>
+
+                        <ButtonComponent 
+                            touch={() => this._call(this.state.detail_data.phone)}
+                            title = "MAKE A CALL"
+                        />
                     </View>
                 </ScrollView>
             </View>

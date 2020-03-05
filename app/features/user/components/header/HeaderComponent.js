@@ -9,7 +9,7 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import Color from "../../../../config/styles";
 import {navigateGoBack} from "../../../../navigation/NavigationHelpers";
 
-export default class HeaderView extends Component{
+export default class HeaderComponent extends Component{
     render(){
         return(
             <View style={styles.header}>

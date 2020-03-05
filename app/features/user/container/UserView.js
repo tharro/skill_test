@@ -11,7 +11,7 @@ import styles from "../container/styles";
 import Color from "../../../config/styles";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import { navigateToScreen } from "../../../navigation/NavigationHelpers";
-import HeaderView from "../components/header/HeaderView";
+import HeaderComponent from "../components/header/HeaderComponent";
 
 export default class UserView extends Component{
     constructor(props){
@@ -97,7 +97,7 @@ export default class UserView extends Component{
         return(
             <View style={styles.container}>
                 <StatusBar barStyle="light-content" />
-                <HeaderView 
+                <HeaderComponent 
                     title = "User List"
                     children = {false}
                 />
