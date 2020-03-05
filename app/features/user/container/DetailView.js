@@ -5,7 +5,6 @@ import {
     ScrollView,
     ImageBackground,
     Linking,
-    TouchableOpacity
 } from "react-native";
 import styles from "../container/styles";
 import HeaderComponent from "../components/header/HeaderComponent";
