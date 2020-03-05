@@ -1,9 +1,9 @@
 import {
     StyleSheet
 } from "react-native";
-import AppStyles from "../../../../config/styles";
-import { isIphoneX } from '../../../../lib/isIphoneX';
-import color from "../../../../config/styles";
+import AppStyles from "../../config/styles";
+import { isIphoneX } from '../../lib/isIphoneX';
+import color from "../../config/styles";
 
 const styles = StyleSheet.create({
     header: {

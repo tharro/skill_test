@@ -11,7 +11,7 @@ import styles from "../container/styles";
 import Color from "../../../config/styles";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import { navigateToScreen } from "../../../navigation/NavigationHelpers";
-import HeaderComponent from "../components/header/HeaderComponent";
+import HeaderComponent from "../../../components/header/HeaderComponent";
 
 export default class UserView extends Component{
     constructor(props){
