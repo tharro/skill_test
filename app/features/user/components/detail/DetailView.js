@@ -6,10 +6,10 @@ import {
     ImageBackground,
     Linking,
 } from "react-native";
-import styles from "../container/styles";
-import HeaderComponent from "../../../components/header/HeaderComponent";
-import ButtonComponent from "../components/button/ButtonComponent";
-import ContentComponent from "../components/content/ContentComponent";
+import styles from "./styles";
+import HeaderComponent from "../../../../components/header/HeaderComponent";
+import ButtonComponent from "../../components/button/ButtonComponent";
+import ContentComponent from "../../components/content/ContentComponent";
 import moment from "moment";
 
 export default class DetailView extends Component {

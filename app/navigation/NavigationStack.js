@@ -2,7 +2,7 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
 import UserContainer from '../features/user/container/UserContainer';
-import DetailView from '../features/user/container/DetailView';
+import DetailView from '../features/user/components/detail/DetailView';
 
 const RNApp = createStackNavigator(
     {

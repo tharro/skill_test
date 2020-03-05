@@ -35,25 +35,6 @@ const styles = StyleSheet.create({
     color_email:{
         color: AppStyles.color.COLOR_GREY
     },
-    detail_content:{
-        borderWidth:1, 
-        borderRadius:10,
-        borderColor:'gray',
-        paddingHorizontal:10,
-        paddingVertical:20,
-    },
-    detail_name: {
-        color: AppStyles.color.COLOR_BLACK,
-        fontSize:17
-    },
-    detail_orther: {
-        color: AppStyles.color.COLOR_GREY,
-        fontSize:15
-    },
-    detail_button_container: {
-        flexDirection:'row', 
-        marginTop:20
-    },
 });
 
 export default styles;
