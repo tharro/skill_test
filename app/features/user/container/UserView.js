@@ -21,6 +21,7 @@ export default class UserView extends Component{
         }
     }
 
+
     componentDidMount(){
         this.props.onGetUser();
     }
@@ -29,8 +30,8 @@ export default class UserView extends Component{
         navigateToScreen(screen, item);
     }
 
-    renderItem = ({item}) => {
-        return(
+    renderItem = ({item, index}) => {
+        return (
             <TouchableOpacity 
             onPress={()=>this._navigate("Detail", item)}
             style={styles.itemList}>

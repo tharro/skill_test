@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import UserView from './UserView';
 import { connect } from 'react-redux';
 import * as userActions from '../action';
-// import { getLoginState } from '../selectors';
+import { getUserState } from '../selectors';
 
 class UserContainer extends Component {
     render() {
@@ -13,7 +13,7 @@ class UserContainer extends Component {
 function mapStateToProps(state) {
     return {
         loading: state.userReducers.isLoading,
-        user_data: state.userReducers.user_data
+        user_data: getUserState(state)
     };
 }
 
