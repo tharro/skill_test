@@ -7,9 +7,9 @@ import {
     Linking,
 } from "react-native";
 import styles from "./styles";
-import HeaderComponent from "../../../../components/header/HeaderComponent";
-import ButtonComponent from "../../components/button/ButtonComponent";
-import ContentComponent from "../../components/content/ContentComponent";
+import HeaderComponent from "../../../../components/header";
+import ButtonComponent from "../button";
+import ContentComponent from "../content";
 import moment from "moment";
 
 export default class DetailView extends Component {
